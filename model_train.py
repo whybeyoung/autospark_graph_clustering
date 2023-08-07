@@ -14,8 +14,8 @@ def _query():
 class TrainInput(BaseModel):
     epoch: int = Field(..., description="训练轮数")
     lr: float = Field(..., description="学习率")
-    alpha1: float = Field(..., description="0-1的图卷积神经网络损失函数权重",default=0.001)
-    alpha2: float = Field(..., description="0-1的自动编码器的损失函数权重",default=0.001)
+    alpha1: float = Field(default=0.001, description="0-1的图卷积神经网络损失函数权重")
+    alpha2: float = Field(default=0.001, description="0-1的自动编码器的损失函数权重")
 
 
 class TrainTool(BaseTool):
